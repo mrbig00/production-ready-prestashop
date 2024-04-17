@@ -12,6 +12,9 @@ jobs:
       with:
         python-version: '3.x' 
         architecture: 'x64'
+    - name: Publish templates
+      run: |
+        aws s3 sync s3://$AWS_S3_BUCKET/versions/commit-$GITHUB_SHA s3://$AWS_S3_BUCKET/versions/latest
     - name: Validate Templates
       run: |
         aws cloudformation validate-template --template-body file://templates/production_ready_prestashop.yaml
