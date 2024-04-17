@@ -74,8 +74,8 @@ Resources:
   # ECS Resources
   Cluster:
     Type: AWS::ECS::Cluster
-    DeletionPolicy: "Retain"
-    UpdateReplacePolicy: Retain
+    DeletionPolicy: "Delete"
+    UpdateReplacePolicy: "Delete"
     Properties:
       ClusterName: !Ref 'ECSClusterName'
       ClusterSettings:
