@@ -164,6 +164,7 @@ Resources:
   FileSystemBackupVault:
     Type: AWS::Backup::BackupVault
     DeletionPolicy: Retain
+    UpdateReplacePolicy: Retain
     Properties:
       BackupVaultName: !Sub
         - ${StackUUID}-EFSBackupVault
