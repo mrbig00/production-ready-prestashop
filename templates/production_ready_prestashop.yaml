@@ -11,7 +11,7 @@ Parameters:
     Type: String
   NestedStacksS3URL:
     Description: S3 URL containing nested templates in this stack
-    Default: https://production-ready-prestashop-cloudformation-template.s3.eu-west-1.amazonaws.com
+    Default: https://production-ready-prestashop-cloudformation-template.s3.eu-west-1.amazonaws.com/versions/latest
     Type: String
   StackUUID:
     Description: Stack UUID
